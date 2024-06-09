@@ -15,15 +15,15 @@ function closeNav() {
 }
 
 
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('.scroll'),
-    smooth: true
-});
+// const scroll = new LocomotiveScroll({
+//     el: document.querySelector('.scroll'),
+//     smooth: true
+// });
 
-document.addEventListener("contextmenu", function(e){
-    e.preventDefault()
+// document.addEventListener("contextmenu", function(e){
+//     e.preventDefault()
 
-},false)
+// },false)
 
 
 
@@ -51,6 +51,63 @@ const projectData = [
         projectLiveLink:   'https://surajahirwar23.github.io/Myntra-Web-Clone/',
     },
 ]
+
+
+
+const serviceData = [ 
+    {
+        title : 'Web Development',
+        icon: '<i class="ri-artboard-fill"></i>',
+        descipton: 'I create tailored web solutions that meet your specific business needs. From simple landing pages to complex web applications, I ensure a seamless user experience and robust functionality.',
+    },
+    {
+        title : 'Website Designing',
+        icon: '<i class="ri-paint-fill"></i>',
+        descipton: 'I design intuitive and engaging user interfaces with a focus on user experience. My designs are user-centric, ensuring that your visitors have a smooth and enjoyable interaction with your site.',
+    },
+    {
+        title : 'Responsive Design',
+        icon: '<i class="ri-artboard-fill"></i>',
+        descipton: 'I design websites that look great and perform well on all devices, from desktops to smartphones. My responsive designs adapt to various screen sizes, providing an optimal viewing experience for your audience.',
+    },
+    {
+        title : 'E-com Website',
+        icon: '<i class="ri-shopping-cart-fill"></i>',
+        descipton: 'I develop secure and scalable e-commerce platforms that help you sell your products online. From shopping cart integration to payment gateway setup, I cover all aspects of your online store.',
+    },
+    {
+        title : 'Social Media Marketing ',
+        icon: '<i class="ri-video-add-fill"></i>',
+        descipton: 'I create and manage effective social media campaigns that increase your brand’s visibility and engagement. By leveraging various social platforms, I help you connect with your audience, drive traffic, and boost conversions.',
+    },
+    {
+        title : 'E-Commerce Operator',
+        icon: '<i class="ri-shopping-bag-2-fill"></i>',
+        descipton: 'I handle the day-to-day operations of your e-commerce business, from inventory management and order processing to customer service and logistics. I ensure your online store runs efficiently, allowing you to focus on growing your business.',
+    },
+];
+
+
+function serviceDisplay() {
+    let servicesContainer = document.querySelector(".servicesContainer")
+
+
+    // let projectdiv = document.createElement("div");
+    let servicediv = "";
+
+    serviceData.forEach(data=>{
+        servicediv+=  `
+        <div>
+            <h1>${data.icon}</h1>
+            <h2>${data.title}</h2>
+            <p>${data.descipton}</p>
+        </div>
+        `
+        })
+        servicesContainer.innerHTML = servicediv
+}
+serviceDisplay()
+
 
 function projectDisplay() {
     let projectContainer = document.querySelector(".projectContainer")

@@ -180,6 +180,67 @@ nav .nav__btn{
     margin-top: 2rem;
 }
 
+/* SERVICE SECTION */
+
+.servicesContainer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #fafafa;
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 2rem;
+
+}
+
+ @media screen and (max-width:900px) {
+    .servicesContainer{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width:700px) {
+    .servicesContainer{
+        grid-template-columns: 1fr;
+    }
+} 
+.servicesContainer div {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+.servicesContainer div:nth-child(3) h1{
+    color: blue;
+}
+.servicesContainer div:nth-child(2) h1{
+    color: orangered;
+}
+.servicesContainer div:nth-child(4) h1{
+    color: crimson;
+}
+.servicesContainer div:nth-child(5) h1{
+    color: rgb(118, 161, 9);
+}
+.servicesContainer h1{
+    font-size: 3rem;
+     color: #7843e9;
+}
+.servicesContainer h2{
+    font-size: 1.7rem;
+    padding: 1rem;
+    text-align: center  ;
+}
+.servicesContainer p{
+    text-align: center;
+    color: rgb(66, 64, 64);
+}
 /* ABOUT SECTION */
 .about__section{
     width: 100%;
@@ -204,6 +265,7 @@ nav .nav__btn{
     letter-spacing: 2px;
     padding: 2rem 0;
     font-weight: 800;
+    
 }
 
 .about__text::after{
