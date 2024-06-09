@@ -48,6 +48,7 @@ const serviceData = [
         title : 'Social Media Marketing ',
         icon: '<i class="ri-video-add-fill"></i>',
         descipton: 'I create and manage effective social media campaigns that increase your brand’s visibility and engagement. By leveraging various social platforms, I help you connect with your audience, drive traffic, and boost conversions.',
+        href: 'social.html'
     },
     {
         title : 'E-Commerce Operator',

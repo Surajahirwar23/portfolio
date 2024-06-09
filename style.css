@@ -140,23 +140,39 @@ nav .nav__btn{
     padding: 2px 4px;
 
 }
-
-.hero__section{
+.hero__section {
     width: 100%;
     position: relative;
-    background-color: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(/daac885…/c157c/assets/svg/common-bg.svg);
-
+    background-image: url(./images/web.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
 }
-.hero__container{
+
+.hero__section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity as needed */
+    z-index: 1;
+}
+
+.hero__container {
     width: 100%;
     padding: 5rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 7rem;
+    margin-top: 5.5rem;
+    position: relative;
+    z-index: 2; /* Ensures the content is above the overlay */
+    color: white; /* Ensure text is visible */
 }
-.hero__container .heading__name{
+
+.hero__container .heading__name {
     font-size: 3.7rem;
     width: 80vw;
     text-align: center;
@@ -164,8 +180,10 @@ nav .nav__btn{
     font-weight: 900;
     margin-bottom: 2rem;
     margin-top: 1rem;
+    color: #e4e1ec;
 }
-.hero__container .intro__para{
+
+.hero__container .intro__para {
     width: 70vw;
     font-size: 1.4rem;
     text-align: center;
@@ -173,12 +191,18 @@ nav .nav__btn{
     padding: 2rem 0;
     font-weight: 600;
     font-family: port2;
-    color: #605e5e;
+    color: #e0e0e0; /* Adjust text color for better contrast */
 }
-.hero__container .cv__btn{
+
+.hero__container .cv__btn {
     padding: 1rem 1.9rem;
     letter-spacing: 1px;
     margin-top: 2rem;
+}
+
+.cv__btn a {
+    text-decoration: none;
+    color: white;
 }
 
 /* SERVICE SECTION */
