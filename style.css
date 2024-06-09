@@ -71,6 +71,7 @@ nav .navImage img{
     height: 50px;
     border-radius: 50%;
     margin-left: 30px;
+    background-position: right;
 }
 nav .navImage:hover h2{
     color: blueviolet;
@@ -207,7 +208,7 @@ nav .nav__btn{
         grid-template-columns: 1fr;
     }
 } 
-.servicesContainer div {
+.servicesContainer div .anchor {
     display: flex;
     padding: 1rem;
     flex-direction: column;
@@ -215,18 +216,22 @@ nav .nav__btn{
     justify-content: center;
     /* border: 1px solid red; */
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    color: black;
 }
-.servicesContainer div:nth-child(3) h1{
+.servicesContainer div:nth-child(4) h1{
     color: blue;
 }
 .servicesContainer div:nth-child(2) h1{
     color: orangered;
 }
-.servicesContainer div:nth-child(4) h1{
+.servicesContainer div:nth-child(3) h1{
     color: crimson;
 }
 .servicesContainer div:nth-child(5) h1{
     color: rgb(118, 161, 9);
+}
+.servicesContainer div:nth-child(6) h1{
+    color: rgb(18, 99, 131);
 }
 .servicesContainer h1{
     font-size: 3rem;

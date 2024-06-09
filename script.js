@@ -15,42 +15,9 @@ function closeNav() {
 }
 
 
-// const scroll = new LocomotiveScroll({
-//     el: document.querySelector('.scroll'),
-//     smooth: true
-// });
-
-// document.addEventListener("contextmenu", function(e){
-//     e.preventDefault()
-
-// },false)
 
 
 
-const projectData = [
-    {
-        projectImage: 'https://img.freepik.com/free-photo/top-view-desk-top-with-list-notebook_23-2148443714.jpg?size=626&ext=jpg&ga=GA1.1.434839779.1711945115&semt=ais',
-
-        projectName: "Todo list app",
-
-        projectDescription: 'Developed a dynamic and user-friendly web application using JavaScript for creating and managing todo list. The application allows users to add, and delete tasks, as well as mark them as completed.',
-
-        projectcodeLink: 'https://github.com/Surajahirwar23/To-do-App.git',
-
-        projectLiveLink:   'https://surajahirwar23.github.io/To-do-App/',
-    },
-    {
-        projectImage: 'https://imgs.search.brave.com/Owo7MY7rR5Xcr01lAQsB5OYUWXsUJbWrIZFSM3CstuA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZHJpYmJibGUuY29t/L3VzZXJzLzEwOTgz/Mzc3L3NjcmVlbnNo/b3RzLzE3ODM2ODE5/L21lZGlhLzkyOWQ1/MDBjZjFkMmEyYzAz/YWExMDU1ODAxMWM0/ZDgxLnBuZz9yZXNp/emU9NDAweDA',
-
-        projectName: "Myntra Web clone",
-
-        projectDescription: 'Developed a e-commerce responsive website using HTML, CSS and JavaScript. Implemented product listing, shopping cart funtionalities',
-
-        projectcodeLink: 'https://github.com/Surajahirwar23/Myntra-Web-Clone.git',
-
-        projectLiveLink:   'https://surajahirwar23.github.io/Myntra-Web-Clone/',
-    },
-]
 
 
 
@@ -59,6 +26,7 @@ const serviceData = [
         title : 'Web Development',
         icon: '<i class="ri-artboard-fill"></i>',
         descipton: 'I create tailored web solutions that meet your specific business needs. From simple landing pages to complex web applications, I ensure a seamless user experience and robust functionality.',
+     
     },
     {
         title : 'Website Designing',
@@ -71,9 +39,10 @@ const serviceData = [
         descipton: 'I design websites that look great and perform well on all devices, from desktops to smartphones. My responsive designs adapt to various screen sizes, providing an optimal viewing experience for your audience.',
     },
     {
-        title : 'E-com Website',
+        title : 'E-Com Website',
         icon: '<i class="ri-shopping-cart-fill"></i>',
         descipton: 'I develop secure and scalable e-commerce platforms that help you sell your products online. From shopping cart integration to payment gateway setup, I cover all aspects of your online store.',
+           href: 'Ecom.html'
     },
     {
         title : 'Social Media Marketing ',
@@ -92,15 +61,16 @@ function serviceDisplay() {
     let servicesContainer = document.querySelector(".servicesContainer")
 
 
-    // let projectdiv = document.createElement("div");
     let servicediv = "";
 
     serviceData.forEach(data=>{
         servicediv+=  `
         <div>
+             <a class="anchor" href=${data.href}>
             <h1>${data.icon}</h1>
             <h2>${data.title}</h2>
             <p>${data.descipton}</p>
+            </a>
         </div>
         `
         })
@@ -138,4 +108,3 @@ function projectDisplay() {
         projectContainer.innerHTML = projectdiv
 }
 
-projectDisplay()
